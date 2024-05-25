@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import { InjectionToken, Injector, ModuleWithProviders, NgModule, Type } from '@angular/core';
+import { CategoryPage } from './category/category.page';
 import {
     RouterModule,
     Route,
@@ -23,9 +24,21 @@ import {
     UrlSegment,
     UrlSegmentGroup,
 } from '@angular/router';
+import { CoursesPage } from './courses/courses.page';
 
 const modulesRoutes: WeakMap<InjectionToken<unknown>, ModuleRoutes> = new WeakMap();
+//    tet code start here
+export const CUSTOM_ROUTES: Routes = [
+    {
+    path: '',
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
+    },
+    { path: 'category', component: CategoryPage },
+    { path: 'courses', component: CoursesPage },
 
+    ];
+
+    //    tet code start here
 /**
  * Build app routes.
  *
@@ -224,6 +237,7 @@ export const APP_ROUTES = new InjectionToken('APP_ROUTES');
         RouterModule.forRoot([]),
     ],
     providers: [
+        { provide: ROUTES, multi: true, useFactory: () => CUSTOM_ROUTES },
         { provide: ROUTES, multi: true, useFactory: buildAppRoutes, deps: [Injector] },
     ],
 })

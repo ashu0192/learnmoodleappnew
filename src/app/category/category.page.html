@@ -1,0 +1,410 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<ion-header>
+  <div style="background-color: rgb(92, 195, 255); display: flex; align-items: center; ">
+    <!-- Background photo -->
+    <div class="header-photo" [ngStyle]="{ 'height': headerHeight, 'opacity': imageOpacity }"> </div>
+    <!-- Back button and heading -->
+    <ion-button class="back-button" fill="clear" (click)="goBack()" [style.opacity]="headerOpacity">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" id="open-modal" expand="block" (click)="toggleFilter()" [style.opacity]=" headerOpacity"
+      class="headingtopside "><ion-icon name="filter-outline"></ion-icon></ion-button>
+    <ion-modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+      <ng-template>
+        <div *ngIf="showFilter" class="block">
+          <ion-list>
+            <ion-item>
+              <ion-label>Category</ion-label>
+              <ion-select [(ngModel)]="selectedCategory">
+                <ion-select-option *ngFor="let category of categories" [value]="category">{{ category }}</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <!-- Filter by rating -->
+            <ion-item>
+              <ion-label>Rating</ion-label>
+              <ion-select [(ngModel)]="selectedRating">
+                <ion-select-option value="1">1 star</ion-select-option>
+                <ion-select-option value="2">2 stars</ion-select-option>
+                <ion-select-option value="3">3 stars</ion-select-option>
+                <ion-select-option value="4">4 stars</ion-select-option>
+                <ion-select-option value="5">5 stars</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <!-- Filter by price -->
+            <ion-item>
+              <ion-label>Price</ion-label>
+              <ion-input type="number" [(ngModel)]="selectedPrice"></ion-input>
+            </ion-item>
+
+            <!-- Filter by duration -->
+            <ion-item>
+              <ion-label>Duration</ion-label>
+              <ion-input type="number" [(ngModel)]="selectedDuration"></ion-input>
+            </ion-item>
+          </ion-list>
+
+          <!-- Apply filter button -->
+          <ion-button expand="block" (click)="applyFilter()">Apply Filter</ion-button>
+        </div>
+      </ng-template>
+    </ion-modal>
+    <ion-title class="heading" [style.opacity]="headerOpacity">Category</ion-title>
+  </div>
+</ion-header>
+
+<ion-content scrollEvents="true" (ionScroll)="onScroll($event)">
+  <div class="padlr">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <p class="heading-text">Start Your Journey Here</p>
+        </ion-col>
+        <ion-col size="4"> <ion-button style="padding-top:10px;" fill="clear">See All</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+    <div>
+      <ion-card (click)="navigateToCoursesPage()">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="7" style="padding: 5px;">
+
+              <p class="heading-text2 content-wrapper2 ">Python For Data Science Advance Certificate Course – Batch 3</p>
+
+              <p class="content-wrapper3">Learn to program in Python and handle classes, libraries, decorators,</p>
+
+              <p style="background-color: hsl(33, 100%, 88%); padding: 5px; border-radius: 1px 5px; width: fit-content; ">Language: English
+              </p>
+              <p style="background-color: hsl(33, 100%, 88%); padding: 5px; border-radius: 1px 5px; width: fit-content; ">Duration: 12 week
+              </p>
+
+            </ion-col>
+            <ion-col style="padding:10px;" size="5"><ion-card><ion-img src="../assets/img/category.webp"></ion-img></ion-card></ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </div>
+    <div>
+      <ion-card (click)="navigateToCoursesPage()">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="7" style="padding: 5px;">
+
+              <p class="heading-text2 content-wrapper2 ">Python For Data Science Advance Certificate Course – Batch 3</p>
+
+              <p class="content-wrapper3">Learn to program in Python and handle classes, libraries, decorators,</p>
+
+              <p style="background-color: hsl(33, 100%, 88%); padding: 5px; border-radius: 1px 5px; width: fit-content; ">Language: English
+              </p>
+              <p style="background-color: hsl(33, 100%, 88%); padding: 5px; border-radius: 1px 5px; width: fit-content; ">Duration: 12 week
+              </p>
+
+            </ion-col>
+            <ion-col style="padding:10px;" size="5"><ion-card><ion-img src="../assets/img/category.webp"></ion-img></ion-card></ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </div>
+    <div>
+      <ion-card (click)="navigateToCoursesPage()">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="7" style="padding: 5px;">
+
+              <p class="heading-text2 content-wrapper2 ">Python For Data Science Advance Certificate Course – Batch 3</p>
+
+              <p class="content-wrapper3">Learn to program in Python and handle classes, libraries, decorators,</p>
+
+              <p style="background-color: hsl(33, 100%, 88%); padding: 5px; border-radius: 1px 5px; width: fit-content; ">Language: English
+              </p>
+              <p style="background-color: hsl(33, 100%, 88%); padding: 5px; border-radius: 1px 5px; width: fit-content; ">Duration: 12 week
+              </p>
+
+            </ion-col>
+            <ion-col style="padding:10px;" size="5"><ion-card><ion-img src="../assets/img/category.webp"></ion-img></ion-card></ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </div>
+  </div>
+
+
+  <div class="padlr">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <p class="heading-text">ALL Data Science Courses</p>
+        </ion-col>
+        <ion-col size="4"> <ion-button style="padding-top:10px;" fill="clear">See All</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+    <div>
+      <ion-card>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="7">
+              <p class="heading-text2">SAS For Data Science Certificate Course</p>
+              <p>This course not only covers the fundamentals of SAS for data science but also offers a rich array…</p>
+
+            </ion-col>
+            <ion-col size="5"><ion-card><ion-img src="../assets/img/new.webp"></ion-img></ion-card></ion-col>
+          </ion-row>
+        </ion-grid>
+        <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+          <p style="padding-top: 6px; font-weight: 500;"> Language:hindi</p>
+          <p style="padding-bottom: 6px; font-weight: 500;">duration:6week</p>
+        </div>
+      </ion-card>
+    </div>
+    <div>
+      <ion-card>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="7">
+              <p class="heading-text2">Short-Term Course In RDBMS And SQL</p>
+              <p>This course helps you in learning MySQL, which is one of the most widely used databases in the… </p>
+
+            </ion-col>
+            <ion-col size="5"><ion-card><ion-img src="../assets/img/new.webp"></ion-img></ion-card></ion-col>
+          </ion-row>
+        </ion-grid>
+        <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+          <p style="padding-top: 6px; font-weight: 500;"> Language:hindi</p>
+          <p style="padding-bottom: 6px; font-weight: 500;">duration:6week</p>
+        </div>
+      </ion-card>
+    </div>
+    <div>
+      <ion-card>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="7">
+              <p class="heading-text2">Advance Diploma In Data Science For AI/ML</p>
+              <p>The Advance Diploma placement guarantee course by AISECT </p>
+
+            </ion-col>
+            <ion-col size="5"><ion-card><ion-img src="../assets/img/new.webp"></ion-img></ion-card></ion-col>
+          </ion-row>
+        </ion-grid>
+        <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+          <p style="padding-top: 6px; font-weight: 500;"> Language:hindi</p>
+          <p style="padding-bottom: 6px; font-weight: 500;">duration:6week</p>
+        </div>
+      </ion-card>
+    </div>
+    <div>
+      <ion-card>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="7">
+              <p class="heading-text2">Advance Diploma In Data Science For AI/ML</p>
+              <p>The Advance Diploma placement guarantee course by AISECT </p>
+
+            </ion-col>
+            <ion-col size="5"><ion-card><ion-img src="../assets/img/new.webp"></ion-img></ion-card></ion-col>
+          </ion-row>
+        </ion-grid>
+        <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+          <p style="padding-top: 6px; font-weight: 500;"> Language:hindi</p>
+          <p style="padding-bottom: 6px; font-weight: 500;">duration:6week</p>
+        </div>
+      </ion-card>
+    </div>
+  </div>
+
+  <div class="padlr">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <p class="heading-text">Featured Course</p>
+        </ion-col>
+        <ion-col size="4"> <ion-button style="padding-top:10px;" fill="clear">See All</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+    <div>
+      <div class="scroll-container">
+        <div class="scroll-content">
+          <ion-card style="display: inline-block; margin-right: 10px; max-width: 300px; height:auto;">
+            <ion-img src="../assets/img/whatsapp.webp" alt=""></ion-img>
+            <ion-card-content style=" width:100%; height:150px; padding:5px; ">
+              <p class="content-wrapper2 heading-text2 " style="font-size: 17px;">Advance Diploma In Data Science For AI/M…</p>
+              <p class="content-wrapper3 " style="font-size: 15px;">The Advance Diploma placement guarantee course by AISECT Learn aims
+                at helping you master all the basic and advanced level
+
+                By Prawal Khare </p>
+            </ion-card-content>
+            <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+              <p style="padding-top: 6px; font-weight: 500;"> 40 Weeks | 191 | Advanced
+              </p>
+            </div>
+          </ion-card>
+          <ion-card style="display: inline-block; margin-right: 10px; max-width: 300px; height:auto;">
+            <ion-img src="../assets/img/whatsapp1.webp" alt=""></ion-img>
+            <ion-card-content style=" width:100%; height:150px; padding:5px; ">
+              <p class="heading-text2 content-wrapper3" style="font-size: 17px;">WhatsApp Page Creation And Advertising
+                Certificate
+                Course In Hindi…</p>
+              <p class="content-wrapper2 " style="font-size: 15px;">इस कोर्स में, शिक्षार्थी इस एप का उपयोग करके व्हाट्सएप</p>
+            </ion-card-content>
+            <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+              <p style="padding-top: 6px; font-weight: 500;"> Language:hindi</p>
+              <p style="padding-bottom: 6px; font-weight: 500;">duration:6week</p>
+            </div>
+          </ion-card>
+          <ion-card style="display: inline-block; margin-right: 10px; max-width: 300px; height:auto;">
+            <ion-img src="../assets/img/whatsapp1.webp" alt=""></ion-img>
+            <ion-card-content style=" width:100%; height:150px; padding:5px; ">
+              <p class="heading-text2 content-wrapper3" style="font-size: 17px;">WhatsApp Page Creation And Advertising
+                Certificate
+                Course In Hindi…</p>
+              <p class="content-wrapper2 " style="font-size: 15px;">इस कोर्स में, शिक्षार्थी इस एप का उपयोग करके व्हाट्सएप</p>
+            </ion-card-content>
+            <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+              <p style="padding-top: 6px; font-weight: 500;"> Language:hindi</p>
+              <p style="padding-bottom: 6px; font-weight: 500;">duration:6week</p>
+            </div>
+          </ion-card>
+          <ion-card style="display: inline-block; margin-right: 10px; max-width: 300px; height:auto;">
+            <ion-img src="../assets/img/whatsapp1.webp" alt=""></ion-img>
+            <ion-card-content style=" width:100%; height:150px; padding:5px; ">
+              <p class="heading-text2 content-wrapper3" style="font-size: 17px;">WhatsApp Page Creation And Advertising
+                Certificate
+                Course In Hindi…</p>
+              <p class="content-wrapper2 " style="font-size: 15px;">इस कोर्स में, शिक्षार्थी इस एप का उपयोग करके व्हाट्सएप</p>
+            </ion-card-content>
+            <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+              <p style="padding-top: 6px; font-weight: 500;"> Language:hindi</p>
+              <p style="padding-bottom: 6px; font-weight: 500;">duration:6week</p>
+            </div>
+          </ion-card>
+          <!-- Add more ion-card elements for additional cards -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="padlr">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <p class="heading-text">Possible Career Path</p>
+        </ion-col>
+        <ion-col size="4"> <ion-button style="padding-top:10px;" fill="clear">See All</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-card class="text-center" style="padding: 20px; ">
+      <p class="heading-text2">Data analyst</p>
+    </ion-card>
+    <ion-card class="text-center" style="padding: 20px; ">
+      <p class="heading-text2">Database administrator</p>
+    </ion-card>
+    <ion-card class="text-center" style="padding: 20px; ">
+      <p class="heading-text2">Data modeler</p>
+    </ion-card>
+    <ion-card class="text-center" style="padding: 20px; ">
+      <p class="heading-text2">Business analyst</p>
+    </ion-card>
+  </div>
+
+
+  <div class="padlr">
+    <ion-grid>
+      <ion-row>
+        <p class="heading-text">Related Free Courses</p>
+      </ion-row>
+    </ion-grid>
+    <div class="scroll-container">
+      <div class="scroll-content">
+        <ion-card style="display: inline-block; margin-right: 10px; max-width: 300px; height:auto;">
+          <img alt="" src="../assets/img/whatsapp1.webp" />
+          <ion-card-header>
+            <p class="heading-text2">Cool DS Job Roles</p>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p class="content-wrapper3"> Cool DS Job Roles
+              Overview of various job roles in Data Science.</p>
+            <p style="padding-top: 5px;">Language: English</p>
+            <p style="padding-top: 5px;">Duration: 1 Week</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card style="display: inline-block; margin-right: 10px; max-width: 300px; height:auto;">
+          <img alt="" src="../assets/img/whatsapp1.webp" />
+          <ion-card-header>
+            <p class="heading-text2">Cool DS Job Roles</p>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p class="content-wrapper3"> Cool DS Job Roles
+              Overview of various job roles in Data Science.</p>
+            <p style="padding-top: 5px;">Language: English</p>
+            <p style="padding-top: 5px;">Duration: 1 Week</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card style="display: inline-block; margin-right: 10px; max-width: 300px; height:auto;">
+          <img alt="" src="../assets/img/whatsapp1.webp" />
+          <ion-card-header>
+            <p class="heading-text2">Cool DS Job Roles</p>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p class="content-wrapper3"> Cool DS Job Roles
+              Overview of various job roles in Data Science.</p>
+            <p style="padding-top: 5px;">Language: English</p>
+            <p style="padding-top: 5px;">Duration: 1 Week</p>
+          </ion-card-content>
+        </ion-card>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="padlr">
+    <ion-grid>
+      <ion-row>
+        <p class="heading-text">Testimonials</p>
+      </ion-row>
+    </ion-grid>
+    <div class="scroll-container">
+      <div class="scroll-content">
+        <div class="whyaisect-container">
+          <img style="width: 80px; height: 80px;" src="../assets/img/Himanshu-Chauhan-image.webp" alt="">
+          <p class="content-wrapper1 heading-text2">Rahul Kumar </p>
+          <p class="content-wrapper3">I really liked the Software and Product development courses by AISECT Learn. Helped me in
+            upskillng
+            and getting a 40% hike.</p>
+        </div>
+        <!-- Add more ion-card elements for additional cards -->
+        <div class="whyaisect-container">
+          <img style="width: 80px; height: 80px;" src="../assets/img/Rahul-kumar-2.webp" alt="">
+          <p class="content-wrapper1 heading-text2">Nihal Prajapati</p>
+          <p class="content-wrapper3">Our courses are certified by NEP and taught by the best in class educators. Not only that, out
+            partners provide the perfect
+            ecosystem to nurture your growth.</p>
+        </div>
+        <div class="whyaisect-container">
+          <img style="width: 80px; height: 80px;" src="../assets/img/nihal.webp" alt="">
+          <p class="content-wrapper1 heading-text2">World Class Knowledge</p>
+          <p class="content-wrapper3">Our courses are certified by NEP and taught by the best in class educators. Not only that, out
+            partners provide the perfect
+            ecosystem to nurture your growth.</p>
+        </div>
+        <div class="whyaisect-container">
+          <img style="width: 80px; height: 80px;" src="../assets/img/World-class-knowledge-iamge.webp" alt="">
+          <p class="content-wrapper1 heading-text2">World Class Knowledge</p>
+          <p class="content-wrapper3">Our courses are certified by NEP and taught by the best in class educators. Not only that, out
+            partners provide the perfect
+            ecosystem to nurture your growth.</p>
+        </div>
+        <!-- Add more ion-card elements for additional cards -->
+      </div>
+    </div>
+  </div>
+
+</ion-content>

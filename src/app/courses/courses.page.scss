@@ -1,0 +1,295 @@
+
+*{
+
+  font-family: ThreeDumb;
+  }
+
+
+  .page-container {
+    height: 100vh; /* Set the height of the container to 100% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+
+  .corner-image {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+  }
+
+
+  .endpadding {
+    margin-right:60px; /* Adjust the margin as needed */
+  }
+
+  .startpadding{
+    margin-left:60px;
+  }
+
+  .scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS devices */
+  }
+
+  .scroll-content {
+  display: inline-block;
+  white-space: nowrap;
+  }
+
+  .scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+  }
+
+  .category-header {
+  margin-left: 10px;
+
+  }
+
+  .wrapped-title {
+  display: block;
+  width: 100%; /* Adjust the width as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis to indicate text overflow */
+  }
+
+  .btn-small{
+  font-size:13px;
+  margin-left:0px;
+  margin-top:10px;
+  border-radius:5px;
+  border: 1px solid #999;
+  }
+
+  .ion-imple{
+  margin-top: 40px;
+  }
+
+  .ion-main{
+  background-color: rgb(146, 174, 177);
+
+  }
+
+  .para-content{
+  font-size:medium;
+  font-weight: 300;
+  }
+
+  .first-card {
+  margin-bottom: -40px; /* Adjust margin bottom as needed */
+  z-index: 1;
+  height: 200px;
+  }
+
+  .inner-card {
+  position: relative;
+  top: -30px; /* Adjust the top position to overlap */
+  z-index: 2;
+  width: 75%;
+  left: 12.5%;
+
+  }
+
+  .icon-padding {
+  padding-top:1px;
+  font-size: x-large;
+  /* Adjust padding as needed */
+  }
+
+
+  .mat-tab-group {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+  }
+  .mat-tab-header-pagination {
+    display: none !important;
+  }
+  .mat-tab-group.mat-primary .mat-ink-bar {
+    display: none !important;
+  }
+  .mat-tab-header {
+    border-bottom: none !important;
+  }
+
+  // style for the left and rightmanagement of padding of the screen
+
+  .padlr{
+    padding: 5px 20px 5px;
+    margin: 10px 0px 10px 0px;
+
+  }
+
+
+  .backdiv{
+
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  .sticktop{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #f6f6f6;
+
+  }
+
+  .custom-tab-label {
+    padding: 10px 10px; /* Adjust the padding */
+    margin: 10 10px; /* Adjust the margin */
+    font-size: 21px; /* Adjust the font size */
+    color: #181717; /* Adjust the text color */
+    text-decoration: none;
+    text-decoration-line: none;
+  }
+  .tab-content {
+    height: calc(120vh - 48px); /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+
+  .btn-first{
+    background-color:hsl(33, 100%, 88%); padding: 5px; border-radius: 1px 5px; width: fit-content;
+    color: black;
+  }
+
+
+  .accordion-style{
+    margin-left: 0;
+    margin-right: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .custom-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Custom grid row */
+  .custom-grid .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Align items vertically */
+  }
+
+  /* Custom grid columns */
+  .custom-grid .col-1,
+  .custom-grid .col-2,
+  .custom-grid .col-9 {
+    flex: 1; /* Each column takes equal width */
+  }
+
+  .custom-grid .col-1 {
+    flex: 0 0 10%; /* Adjust width as needed */
+  }
+
+  .custom-grid .col-2 {
+    flex: 0 0 10%; /* Adjust width as needed */
+  }
+
+  .custom-grid .col-9 {
+    flex: 1 ; /* Takes remaining space */
+  }
+  .heading-text {
+    color: #064727;
+    font-size: 24px;
+    line-height: 20px;
+}
+
+.heading-text2{
+color: #4a4a4a;
+text-decoration: none;
+font-size: 17px;
+font-weight: 500;
+white-space: normal;
+line-height: 20px;
+}
+
+.heading-text3{
+color: #4a4a4a;
+text-decoration: none;
+font-size: 15px;
+font-weight: 600;
+white-space: normal;
+line-height: 20px;
+}
+
+.heading-text4{
+  color: #4a4a4a;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: normal;
+  line-height: 20px;
+  }
+
+
+
+.content-wrapper {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* Number of lines to show */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  padding: 0px;
+  max-height: 100%; /* Make sure it does not exceed the card's max height */
+}
+
+.content-wrapper2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Number of lines to show */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  padding: 0px;
+  max-height: 100%; /* Make sure it does not exceed the card's max height */
+}
+.content-wrapper3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  padding: 0px;
+  max-height: 100%; /* Make sure it does not exceed the card's max height */
+}
+.content-wrapper0 {
+  text-align: justify; /* Ensures text is justified */
+  white-space: pre-wrap; /* Preserves whitespace and allows wrapping */
+  word-wrap: break-word; /* Breaks long words to ensure they fit */
+  overflow-wrap: break-word; /* Ensures overflow words break properly */
+  margin: 0 auto; /* Centers the content */
+  max-width: 600px; /* Optional: Limits the maximum width */
+}
+
+
+.partners-container{
+  display: inline-block;
+   margin-right: 10px;
+   padding: 8px;
+    margin: 8px;
+    text-align: center;
+     width: 150px;
+     height: auto;
+
+}
+
+.whyaisect-container{
+  display: inline-block; margin-right: 10px; padding: 8px; margin: 8px; text-align: center; border-radius: 5px; border: 1px solid black; width: 300px; height: auto; text-wrap: nowrap;
+}
+
+.large-label {
+  font-size: 17px; /* Adjust the font size as needed */
+}
+ion-card{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}

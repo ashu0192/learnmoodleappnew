@@ -1,0 +1,478 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<ion-content>
+  <swiper-container [autoplay]="{ delay: 1000 }" (slidechange)="swiperSlideChanged($event)" [loop]="true" [pagination]="true">
+    <swiper-slide style="height:100%; width: 100%;"><img style="height:100%" src="../assets/img/image.png" alt="Slide 1"></swiper-slide>
+    <swiper-slide><img style="height:100%; width: 100%;" src="../assets/img/img6.png" alt="Slide 1"></swiper-slide>
+    <swiper-slide><img style="height:100%; width: 100%;" src="../assets/img/img8.png" alt="Slide 1"></swiper-slide>
+  </swiper-container>
+
+  <div class=" padlr">
+    <div class="category-header">
+      <p class="heading-text">Top Categories</p>
+    </div>
+    <div class="scroll-container">
+      <div class="scroll-content">
+        <ion-card (click)="navigateToAnotherPage()" style="display: inline-block; margin-right: 10px; max-width: 300px; height:100px; ">
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <!-- Left part for content -->
+                <ion-col size="8">
+                  <p class="heading-text2">Future Skill Academy </p>
+                </ion-col>
+                <!-- Right part for font -->
+                <ion-col size="4">
+                  <div style="text-align: center;">
+                    <p style="font-size: 40px; "><ion-icon name="laptop-outline"></ion-icon></p>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+        <!-- Add more ion-card elements for additional cards -->
+        <ion-card style="display: inline-block; margin-right: 10px; max-width: 300px; height:100px; ">
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <!-- Left part for content -->
+                <ion-col size="8">
+                  <p class="heading-text2">Data Science</p>
+                </ion-col>
+                <!-- Right part for font -->
+                <ion-col size="4">
+                  <div style="text-align: center;">
+                    <p style="font-size: 40px; "><ion-icon name="cash-outline"></ion-icon></p>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+        <ion-card style="display: inline-block; margin-right: 10px; max-width: 300px; height:100px;  ">
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <!-- Left part for content -->
+                <ion-col size="8">
+                  <p class="heading-text2">Medical science</p>
+                </ion-col>
+                <!-- Right part for font -->
+                <ion-col size="4">
+                  <div style="text-align: center;">
+                    <p style="font-size: 40px; "><ion-icon name="aperture-outline"></ion-icon></p>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+        <ion-card style="display: inline-block; margin-right: 10px; max-width: 300px; height:100px;  ">
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <!-- Left part for content -->
+                <ion-col size="8">
+                  <p class="heading-text2">Bfsi</p>
+                </ion-col>
+                <!-- Right part for font -->
+                <ion-col size="4">
+                  <div style="text-align: center;">
+                    <p style="font-size: 40px; "><ion-icon name="aperture-outline"></ion-icon></p>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+        <ion-card style="display: inline-block; margin-right: 10px; max-width: 300px; height:100px;  ">
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <!-- Left part for content -->
+                <ion-col size="8">
+                  <p class="heading-text2">Cyber Security</p>
+                </ion-col>
+                <!-- Right part for font -->
+                <ion-col size="4">
+                  <div style="text-align: center;">
+                    <p style="font-size: 40px; "><ion-icon name="aperture-outline"></ion-icon></p>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+        <ion-card style="display: inline-block; margin-right: 10px; max-width: 300px; height:100px;  ">
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <!-- Left part for content -->
+                <ion-col size="8">
+                  <p class="heading-text2">Foreign Languages</p>
+                </ion-col>
+                <!-- Right part for font -->
+                <ion-col size="4">
+                  <div style="text-align: center;">
+                    <p style="font-size: 40px; "><ion-icon name="aperture-outline"></ion-icon></p>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+        <!-- Add more ion-card elements for additional cards -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="padlr ">
+    <ion-card class="ion-main">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <!-- Left part for content -->
+            <ion-col size="8">
+              <p class="heading-text2" style="color: black;">Let's find the right course for you</p>
+              <ion-button color="light" size="small" class="btn-small"> Get Recommendations</ion-button>
+            </ion-col>
+            <!-- Right part for font -->
+            <ion-col size="4">
+              <div style="text-align: center;">
+                <p style="font-size: 40px; "><ion-icon name="laptop-outline"></ion-icon></p>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <!-- Add more ion-card elements for additional cards -->
+
+  <div style=" padding: 5px 10px 0px;">
+    <div class="category-header">
+      <p class="heading-text">Featured Certification Courses</p>
+      <p class="content-wrapper0" style="padding-right: 10px;">AISECT Learn is the best online Learning platform designed for up-skilling
+        and
+        provides in-demand,
+        industry
+        ready job oriented online courses with certificates in Data Science, Digital Marketing, Cyber Security, Business Management, BFSI,
+        Software development etc. with placement assistance in a wide array of disciplines from recognized world class universities.</p>
+    </div>
+    <ion-card class="first-card full-image-card">
+      <ion-img src="../assets/img/digital.jpg"></ion-img>
+    </ion-card>
+    <ion-card class="inner-card">
+      <ion-card-content>
+        <ion-grid style="height: 60px; ">
+          <ion-row>
+            <ion-col size="11">
+              <p class="heading-text2 content-wrapper2">Digital Marketing Expert Program With AI TOOLS </p>
+            </ion-col>
+            <ion-col size="1"><ion-icon name="arrow-forward-circle-outline" class="icon-padding"></ion-icon></ion-col>
+          </ion-row>
+          <ion-row>
+            <p class="content-wrapper">The course comprises fundamentals of Digital Marketing along…</p>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="first-card full-image-card">
+      <ion-img src="../assets/img/digital1.webp"></ion-img>
+    </ion-card>
+    <ion-card class="inner-card">
+      <ion-card-content>
+        <ion-grid style="height: 60px; ">
+          <ion-row>
+            <ion-col size="11">
+              <p class="heading-text2 content-wrapper2">Python For Data Science Advance Certific… </p>
+            </ion-col>
+            <ion-col size="1"><ion-icon name="arrow-forward-circle-outline" class="icon-padding"></ion-icon></ion-col>
+          </ion-row>
+          <ion-row>
+            <p class="content-wrapper">Learn to program in Python and handle classes</p>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="first-card full-image-card">
+      <ion-img src="../assets/img/img10.jpg"></ion-img>
+    </ion-card>
+    <ion-card class="inner-card">
+      <ion-card-content>
+        <ion-grid style="height: 60px; ">
+          <ion-row>
+            <ion-col size="11">
+              <p class="heading-text2 content-wrapper2">Digital Marketing Advance Certificate Course </p>
+            </ion-col>
+            <ion-col size="1"><ion-icon name="arrow-forward-circle-outline" class="icon-padding"></ion-icon></ion-col>
+          </ion-row>
+          <ion-row>
+            <p class="content-wrapper">The course comprises fundamentals of Digital Marketing along…</p>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div style=" padding: 0px 10px 5px;">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <p class="heading-text" style="margin: 0px;">Online Certification Courses In Hindi</p>
+        </ion-col>
+        <ion-col size="4"> <ion-button style=" margin: 0px;" fill="clear">See All</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="scroll-container">
+      <div class="scroll-content">
+        <ion-card style="display: inline-block; margin-right: 10px; max-width: 200px; height:auto;">
+          <ion-img src="../assets/img/whatsapp.webp" alt=""></ion-img>
+          <ion-card-content style=" width:100%; height:auto; padding:5px; ">
+            <p class="content-wrapper2 heading-text2 " style="font-size: 17px;">Essential Digital Marketing Skills In Hindi</p>
+            <p class="content-wrapper2 " style="font-size: 15px;">इस कोर्स में उन अवधारणाओं/कॉन्सेप्ट्स को शामिल किया गया है</p>
+          </ion-card-content>
+          <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+            <p style="padding-top: 6px; font-weight: 500;"> Language:hindi</p>
+            <p style="padding-bottom: 6px; font-weight: 500;">duration:6week</p>
+          </div>
+        </ion-card>
+        <ion-card style="display: inline-block; margin-right: 10px; max-width: 200px; height:auto;">
+          <ion-img src="../assets/img/whatsapp1.webp" alt=""></ion-img>
+          <ion-card-content style=" width:100%; height:auto; padding:5px; ">
+            <p class="content-wrapper2 heading-text2 " style="font-size: 17px;">Essential Digital Marketing Skills In Hindi</p>
+            <p class="content-wrapper2 " style="font-size: 15px;">इस कोर्स में उन अवधारणाओं/कॉन्सेप्ट्स को शामिल किया गया है</p>
+          </ion-card-content>
+          <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+            <p style="padding-top: 6px; font-weight: 500;"> Language:hindi</p>
+            <p style="padding-bottom: 6px; font-weight: 500;">duration:6week</p>
+          </div>
+        </ion-card>
+        <ion-card style="display: inline-block; margin-right: 10px; max-width: 200px; height:auto;">
+          <ion-img src="../assets/img/whatsapp1.webp" alt=""></ion-img>
+          <ion-card-content style=" width:100%; height:auto; padding:5px; ">
+            <p class="content-wrapper2 heading-text2 " style="font-size: 17px;">Essential Digital Marketing Skills In Hindi</p>
+            <p class="content-wrapper2 " style="font-size: 15px;">इस कोर्स में उन अवधारणाओं/कॉन्सेप्ट्स को शामिल किया गया है</p>
+          </ion-card-content>
+          <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+            <p style="padding-top: 6px; font-weight: 500;"> Language:hindi</p>
+            <p style="padding-bottom: 6px; font-weight: 500;">duration:6week</p>
+          </div>
+        </ion-card>
+        <ion-card style="display: inline-block; margin-right: 10px; max-width: 200px; height:auto;">
+          <ion-img src="../assets/img/whatsapp1.webp" alt=""></ion-img>
+          <ion-card-content style=" width:100%; height:auto; padding:5px; ">
+            <p class="content-wrapper2 heading-text2 " style="font-size: 17px;">Essential Digital Marketing Skills In Hindi Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Blanditiis, obcaecati!</p>
+            <p class="content-wrapper2 " style="font-size: 15px;">इस कोर्स में उन अवधारणाओं/कॉन्सेप्ट्स को शामिल किया गया है Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit. Quaerat, aliquam.</p>
+          </ion-card-content>
+          <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+            <p style="padding-top: 6px; font-weight: 500;"> Language:hindi</p>
+            <p style="padding-bottom: 6px; font-weight: 500;">duration:6week</p>
+          </div>
+        </ion-card>
+        <!-- Add more ion-card elements for additional cards -->
+      </div>
+    </div>
+  </div>
+
+  <div class="padlr">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <p class="heading-text">Explore Free Online Courses</p>
+        </ion-col>
+        <ion-col size="4"> <ion-button style="padding-top:10px;" fill="clear">See All</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+    <div *ngFor="let item of items">
+      <ion-card>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="7" style="padding: 5px;">
+
+              <p class="heading-text2">How To Start Your Career As A Data Analy…</p>
+
+              <p> In this course,
+                students will get a basic…</p>
+
+              <p style="background-color: hsl(33, 100%, 88%); padding: 5px; border-radius: 1px 5px; width: fit-content; ">Language: English
+              </p>
+              <p style="background-color: hsl(33, 100%, 88%); padding: 5px; border-radius: 1px 5px; width: fit-content; ">Duration: 1 Hr</p>
+
+            </ion-col>
+            <ion-col style="padding:10px;" size="5"><ion-card><ion-img src="../assets/img/carrier.webp"></ion-img></ion-card></ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </div>
+
+  </div>
+
+  <div class="padlr">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <p class="heading-text">Interactive live Online Certification Courses</p>
+        </ion-col>
+        <ion-col size="4"> <ion-button style="padding-top:10px;" fill="clear">See All</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+    <div *ngFor="let item of items">
+      <ion-card>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="7">
+              <p class="heading-text2">Advance Diploma In Data Science For AI/ML</p>
+              <p>The Advance Diploma placement guarantee course by AISECT </p>
+
+            </ion-col>
+            <ion-col size="5"><ion-card><ion-img src="../assets/img/new.webp"></ion-img></ion-card></ion-col>
+          </ion-row>
+        </ion-grid>
+        <div style="background:#cee2e6; width:200%; height:70px; padding-left: 10px;">
+          <p style="padding-top: 6px; font-weight: 500;"> Language:hindi</p>
+          <p style="padding-bottom: 6px; font-weight: 500;">duration:6week</p>
+        </div>
+      </ion-card>
+    </div>
+  </div>
+
+
+  <div class="padlr">
+    <ion-grid>
+      <ion-row>
+        <p class="heading-text">Trusted By Learners</p>
+      </ion-row>
+    </ion-grid>
+    <div class="scroll-container">
+      <div class="scroll-content">
+        <div class="whyaisect-container">
+          <img style="width: 80px; height: 80px;" src="../assets/img/Himanshu-Chauhan-image.webp" alt="">
+          <p class="content-wrapper1 heading-text2">Rahul Kumar </p>
+          <p class="content-wrapper3">I really liked the Software and Product development courses by AISECT Learn. Helped me in upskillng
+            and getting a 40% hike.</p>
+        </div>
+        <!-- Add more ion-card elements for additional cards -->
+        <div class="whyaisect-container">
+          <img style="width: 80px; height: 80px;" src="../assets/img/Rahul-kumar-2.webp" alt="">
+          <p class="content-wrapper1 heading-text2">Nihal Prajapati</p>
+          <p class="content-wrapper3">Our courses are certified by NEP and taught by the best in class educators. Not only that, out
+            partners provide the perfect
+            ecosystem to nurture your growth.</p>
+        </div>
+        <div class="whyaisect-container">
+          <img style="width: 80px; height: 80px;" src="../assets/img/nihal.webp" alt="">
+          <p class="content-wrapper1 heading-text2">World Class Knowledge</p>
+          <p class="content-wrapper3">Our courses are certified by NEP and taught by the best in class educators. Not only that, out
+            partners provide the perfect
+            ecosystem to nurture your growth.</p>
+        </div>
+        <div class="whyaisect-container">
+          <img style="width: 80px; height: 80px;" src="../assets/img/World-class-knowledge-iamge.webp" alt="">
+          <p class="content-wrapper1 heading-text2">World Class Knowledge</p>
+          <p class="content-wrapper3">Our courses are certified by NEP and taught by the best in class educators. Not only that, out
+            partners provide the perfect
+            ecosystem to nurture your growth.</p>
+        </div>
+        <!-- Add more ion-card elements for additional cards -->
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="padlr">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p class="heading-text">Why AISECT Learn</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="scroll-container">
+      <div class="scroll-content">
+        <div class="whyaisect-container">
+          <img style="width: 50px; height: 50px;" src="../assets/img/World-class-knowledge-iamge.webp" alt="">
+          <p class="content-wrapper1 heading-text2">World Class Knowledge</p>
+          <p class="content-wrapper3">Our courses are certified by NEP and taught by the best in class educators. Not only that, out
+            partners provide the perfect
+            ecosystem to nurture your growth.</p>
+        </div>
+        <!-- Add more ion-card elements for additional cards -->
+        <div class="whyaisect-container">
+          <img style="width: 50px; height: 50px;" src="../assets/img/World-class-knowledge-iamge.webp" alt="">
+          <p class="content-wrapper1 heading-text2">World Class Knowledge</p>
+          <p class="content-wrapper3">Our courses are certified by NEP and taught by the best in class educators. Not only that, out
+            partners provide the perfect
+            ecosystem to nurture your growth.</p>
+        </div>
+        <div class="whyaisect-container">
+          <img style="width: 50px; height: 50px;" src="../assets/img/World-class-knowledge-iamge.webp" alt="">
+          <p class="content-wrapper1 heading-text2">World Class Knowledge</p>
+          <p class="content-wrapper3">Our courses are certified by NEP and taught by the best in class educators. Not only that, out
+            partners provide the perfect
+            ecosystem to nurture your growth.</p>
+        </div>
+        <div class="whyaisect-container">
+          <img style="width: 50px; height: 50px;" src="../assets/img/World-class-knowledge-iamge.webp" alt="">
+          <p class="content-wrapper1 heading-text2">World Class Knowledge</p>
+          <p class="content-wrapper3">Our courses are certified by NEP and taught by the best in class educators. Not only that, out
+            partners provide the perfect
+            ecosystem to nurture your growth.</p>
+        </div>
+        <!-- Add more ion-card elements for additional cards -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="padlr">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p class="heading-text">Skilling and Learning Partners</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="scroll-container">
+      <div class="scroll-content">
+        <div class="partners-container">
+          <ion-img src="../assets/img/Group-4050.webp"></ion-img>
+        </div>
+        <div class="partners-container">
+          <ion-img src="../assets/img/Group-4051.webp"></ion-img>
+        </div>
+        <div class="partners-container">
+          <ion-img src="../assets/img/Group-4052.webp"></ion-img>
+        </div>
+
+        <div class="partners-container">
+          <ion-img src="../assets/img/HP.webp"></ion-img>
+        </div>
+        <div class="partners-container">
+          <ion-img src="../assets/img/infosys.webp"></ion-img>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<!-- footer starts from here  -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-tab-button tab="home" slot="start" class="startpadding">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)="navigateToCourses()" slot="end" class="endpadding">
+      <ion-icon name="book-outline"></ion-icon>
+      <ion-label>My Courses</ion-label>
+    </ion-tab-button>
+  </ion-toolbar>
+</ion-footer>
